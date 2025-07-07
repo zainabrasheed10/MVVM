@@ -3,9 +3,11 @@ package com.example.mvvmarchitecture
 import android.util.Patterns
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import javax.inject.Inject
 
-class LoginViewModel : BaseObservable() {
+class LoginViewModel @Inject constructor(
     private val model : Model = Model("", "")
+): BaseObservable() {
 
     //Getter and setter methods for toast message
     @get:Bindable

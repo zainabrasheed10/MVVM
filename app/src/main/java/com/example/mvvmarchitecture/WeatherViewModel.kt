@@ -3,9 +3,14 @@ package com.example.mvvmarchitecture
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class WeatherViewModel : ViewModel() {
-    private val weatherRepository = WeatherRepository()
+@HiltViewModel
+class WeatherViewModel @Inject constructor(
+    private val weatherRepository : WeatherRepository
+)
+    : ViewModel() {
 
     private val _weatherData = MutableLiveData<Weather>()
     val weatherData : LiveData<Weather> = _weatherData

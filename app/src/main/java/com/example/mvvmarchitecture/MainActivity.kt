@@ -11,7 +11,10 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.databinding.BindingAdapter
 import androidx.databinding.DataBindingUtil
 import com.example.mvvmarchitecture.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
